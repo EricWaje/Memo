@@ -1,7 +1,7 @@
-import React from 'react';
+//import React, {useMemo} from 'react';
 
 const ComponenteHijo = ({ texto, cuenta, sumarUno }) => {
-    console.log(`${texto} renderizado`);
+    //console.log(`${texto} renderizado`);
     return (
         <div className="caja">
             <p>{texto}</p>
@@ -13,4 +13,4 @@ const ComponenteHijo = ({ texto, cuenta, sumarUno }) => {
     );
 };
 
-export default React.memo(ComponenteHijo);
+export default ComponenteHijo;

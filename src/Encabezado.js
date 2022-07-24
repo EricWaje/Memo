@@ -1,7 +1,7 @@
-import React from 'react';
+//import React, { useMemo } from 'react';
 
 const Encabezado = () => {
-    console.log('Encabezado');
+    //console.log('Encabezado');
     return (
         <div className="encabezado">
             <h1>Contadores</h1>
@@ -9,4 +9,4 @@ const Encabezado = () => {
     );
 };
 
-export default React.memo(Encabezado);
+export default Encabezado;
