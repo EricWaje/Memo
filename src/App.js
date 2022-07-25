@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Encabezado from './Encabezado';
 import ComponenteHijo from './ComponenteHijo';
 import './estilos.css';
@@ -11,6 +11,22 @@ const App = () => {
     const [contador3, cambiarContador3] = useState(1);
 
     //useCallback -> memorizar funciones
+    //useEffect(()=>{}, [])
+    //useCallback(() => {}, []);
+    //useMemo(() => {}, []);
+    const aumentar1 = useCallback(() => {
+        cambiarContador1(contador1 + 1);
+    }, [contador1]);
+
+    const aumentar2 = useCallback(() => {
+        cambiarContador2(contador2 + 1);
+    }, [contador2]);
+
+    const aumentar3 = useCallback(() => {
+        cambiarContador3(contador3 + 1);
+    }, [contador3]);
+
+    /*
     const aumentar1 = () => {
         cambiarContador1(contador1 + 1);
     };
@@ -21,7 +37,7 @@ const App = () => {
 
     const aumentar3 = () => {
         cambiarContador3(contador3 + 1);
-    };
+    }; */
 
     return (
         <>

@@ -1,4 +1,4 @@
-//import React, { memo } from 'react';
+import React, { memo } from 'react';
 import Card from './Card';
 
 const CardList = ({ items }) => {
@@ -20,5 +20,5 @@ const CardList = ({ items }) => {
     );
 };
 
-//export default memo(CardList);
-export default CardList;
+export default memo(CardList);
+//export default CardList;
