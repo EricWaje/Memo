@@ -44,14 +44,16 @@ const listaDeNombres = [
 ];
 
 const List = ({ nombre }) => {
-    // eslint-disable-next-line
-    const nombreFiltrado = listaDeNombres.filter((user) => {
-        if (nombre === '') {
-            return user;
-        } else if (user.name.toLowerCase().includes(nombre.toLowerCase())) {
-            return user;
+    const getNombreFiltrado = (query, nombres) => {
+        if (!query) {
+            return nombres;
         }
-    });
+        return nombres.filter((nombre) =>
+            nombre.name.toLowerCase().includes(query)
+        );
+    };
+
+    const nombreFiltrado = getNombreFiltrado(nombre, listaDeNombres);
 
     return (
         <div style={{ width: '100%' }}>
